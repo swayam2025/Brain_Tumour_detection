@@ -1,7 +1,0 @@
-streamlit==1.29.0
-tensorflow-cpu==2.12.0
-numpy
-pillow
-opencv-python-headless
-scikit-image
-matplotlib
