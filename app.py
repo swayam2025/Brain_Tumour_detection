@@ -36,9 +36,9 @@ def dice_loss(y_true, y_pred):
 # ---------------- LOAD MODELS ----------------
 @st.cache_resource
 def load_models():
-    cls_model = tf.keras.models.load_model("models/classification.h5")
+    cls_model = tf.keras.models.load_model("classification.h5")
     seg_model = tf.keras.models.load_model(
-        "models/segmentation.h5",
+        "segmentation.h5",
         custom_objects={
             "dice_loss": dice_loss,
             "dice_coef": dice_coef
@@ -118,3 +118,4 @@ if uploaded_file is not None:
 
     else:
         st.info("✅ No tumor detected, segmentation skipped.")
+
